@@ -1,0 +1,20 @@
+﻿<iot>
+  <server>
+    <!--服务器socket监听端口-->
+    <port>1024</port>
+  </server>
+	<log>
+		<!--文件大小-->
+		<fileSize>10</fileSize>
+		<!--1 控制台输出 2 文件输出 3 混合输出-->
+		<level>1</level>
+		<!--是否启用调试信息 1 启用 0 不启用-->
+		<debug>1</debug>
+	</log>
+	<thrift>
+		<!--thrift服务器端口-->
+		<port>9090</port>
+		<!--thrift服务线程数-->
+		<threadSize>4</threadSize>
+	</thrift>
+</iot>

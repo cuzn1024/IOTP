@@ -1,0 +1,51 @@
+CREATE TABLE t_freid_info (
+	Id INTEGER PRIMARY KEY NOT NULL COMMENT '自增ID',
+	FreId INTEGER UNIQUE NOT NULL COMMENT '频率ID',
+	Type INTEGER DEFAULT 0 COMMENT '服务基站类型',
+	NetworkAddr INTEGER DEFAULT 0 COMMENT '服务网络地址',
+	Time INTEGER DEFAULT 0 COMMENT '插入时间'
+);
+
+
+CREATE TABLE t_msite_work (
+	Id INTEGER PRIMARY KEY NOT NULL COMMENT '自增ID',
+	NetworkAddr INTEGER DEFAULT 0 COMMENT 'M基站网络地址',
+	EdNetworkAddr INTEGER DEFAULT 0 COMMENT '终端网络地址',
+	InService INTEGER DEFAULT 0 COMMENT '是否服务中'
+);
+
+
+CREATE TABLE t_node_info (
+	Id INTEGER PRIMARY KEY NOT NULL COMMENT '自增ID',
+	NetworkAddr INTEGER UNIQUE DEFAULT 0 COMMENT '网络地址',
+	PhyAddr VARCHAR (16) NOT NULL COMMENT '物理地址',
+	Type INTEGER DEFAULT 0 COMMENT '节点类型',
+	STATUS INTEGER DEFAULT 0 COMMENT '状态',
+	Time INTEGER DEFAULT 0 COMMENT '插入时间'
+);
+
+
+CREATE TABLE t_rsite_work (
+	Id INTEGER PRIMARY KEY NOT NULL COMMENT '自增ID',
+	NetworkAddr INTEGER DEFAULT 0 COMMENT 'R基站网络地址',
+	EdNetworkAddr INTEGER DEFAULT 0 COMMENT '终端网络地址',
+	GroupId INTEGER DEFAULT 0 COMMENT '分组ID',
+	Postion INTEGER DEFAULT 0 COMMENT '位置索引',
+	InService INTEGER DEFAULT 0 COMMENT '是否服务中'
+);
+
+CREATE TABLE t_server_config (
+	Id INTEGER PRIMARY KEY NOT NULL  COMMENT '自增ID',
+	KEY VARCHAR (50) UNIQUE NOT NULL COMMENT '配置Key 其他数据库存储请不要用KEY字符串',
+	VALUE VARCHAR (100) NOT NULL COMMENT '配置Value 其他数据库存储请不要用VALUE字符串'
+);
+
+CREATE TABLE t_site_allow (
+	Id INTEGER PRIMARY KEY COMMENT '自增ID',
+	PhyAddr VARCHAR (16) UNIQUE NOT NULL COMMENT '物理地址',
+	Type INTEGER DEFAULT 0 COMMENT '基站类型'
+);
+
+CREATE INDEX uni_t_msite_work on t_msite_work (NetworkAddr, EdNetworkAddr);
+
+CREATE INDEX uni_t_rsite_work on t_rsite_work (NetworkAddr, EdNetworkAddr);

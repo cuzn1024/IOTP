@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-XP|Win32">
+      <Configuration>Release-XP</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-XP|x64">
+      <Configuration>Release-XP</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5E996E25-AD89-4E53-90FC-DC63D6CBD1DE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>main</RootNamespace>
+    <ProjectName>main</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-XP|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-XP|x64'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\boost.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\boost.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release-XP|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\boost_xp.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="..\props\boost.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="..\props\boost_x64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\gen\bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)..\gen\obj\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <TargetName>$(SolutionName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\gen\bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)..\gen\obj\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(SolutionName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-XP|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\gen\bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)..\gen\obj\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(SolutionName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <OutDir>$(SolutionDir)\gen\bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\gen\obj\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(SolutionName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\gen\bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\gen\obj\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(SolutionName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG_;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\deps\sqlite\include;$(SolutionDir)..\src\main;$(SolutionDir)..\src\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(SolutionName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\deps\sqlite\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /d /y "$(SolutionDir)..\deps\sqlite\lib\$(Platform)\*.dll"  "$(SolutionDir)..\gen\bin\$(Configuration)\$(Platform)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_DEBUG_;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\deps\sqlite\include;$(SolutionDir)..\src\main;$(SolutionDir)..\src\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(SolutionName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\deps\sqlite\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /d /y "$(SolutionDir)..\deps\sqlite\lib\$(Platform)\*.dll"  "$(SolutionDir)..\gen\bin\$(Configuration)\$(Platform)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-XP|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>ROUTING_ENABLE;WIN32;_DEBUG_;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\deps\sqlite\include;$(SolutionDir)..\src\main;$(SolutionDir)..\src\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(SolutionName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\deps\sqlite\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /d /y "$(SolutionDir)..\deps\sqlite\lib\$(Platform)\*.dll"  "$(SolutionDir)..\gen\bin\$(Configuration)\$(Platform)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>sqlite3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(SolutionName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)\deps\sqlite\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\deps\sqlite\include;$(SolutionDir)\src\main;$(SolutionDir)\src\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG_;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)deps\sqlite\lib\$(Platform)\*.dll"  "$(SolutionDir)\gen\bin\$(Configuration)\$(Platform)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)\deps\sqlite\include;$(SolutionDir)\src\main;$(SolutionDir)\src\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)\deps\sqlite\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sqlite3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-XP|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\main\czapplication.cpp" />
+    <ClCompile Include="..\..\src\main\czconfiguration.cpp" />
+    <ClCompile Include="..\..\src\main\czsingletonmanager.cpp" />
+    <ClCompile Include="..\..\src\main\czsuitmanager.cpp" />
+    <ClCompile Include="..\..\src\main\logic\czapicenter.cpp" />
+    <ClCompile Include="..\..\src\main\logic\czdatahelper.cpp" />
+    <ClCompile Include="..\..\src\main\logic\czlogiccenter.cpp" />
+    <ClCompile Include="..\..\src\main\main.cpp" />
+    <ClCompile Include="..\..\src\main\network\czconnectionsuite.cpp" />
+    <ClCompile Include="..\..\src\main\network\czdevice.cpp" />
+    <ClCompile Include="..\..\src\main\network\czmsite.cpp" />
+    <ClCompile Include="..\..\src\main\network\cznode.cpp" />
+    <ClCompile Include="..\..\src\main\network\cznodemanager.cpp" />
+    <ClCompile Include="..\..\src\main\network\czrsite.cpp" />
+    <ClCompile Include="..\..\src\main\network\czsession.cpp" />
+    <ClCompile Include="..\..\src\main\network\czsessionmanager.cpp" />
+    <ClCompile Include="..\..\src\main\network\czsite.cpp" />
+    <ClCompile Include="..\..\src\main\system\czlog.cpp" />
+    <ClCompile Include="..\..\src\main\system\czlogger.cpp" />
+    <ClCompile Include="..\..\src\main\system\czupdatemanager.cpp" />
+    <ClCompile Include="..\..\src\main\thread\czassemblerthread.cpp" />
+    <ClCompile Include="..\..\src\main\thread\czcollectorthread.cpp" />
+    <ClCompile Include="..\..\src\main\thread\czmessagepool.cpp" />
+    <ClCompile Include="..\..\src\main\thread\czprocessorthread.cpp" />
+    <ClCompile Include="..\..\src\main\thread\czthreadmanager.cpp" />
+    <ClCompile Include="..\..\src\main\thread\cztimerthread.cpp" />
+    <ClCompile Include="..\..\src\main\thrift\czthriftmanager.cpp" />
+    <ClCompile Include="..\..\src\main\utils\czmiscs.cpp" />
+    <ClCompile Include="..\..\src\main\utils\win\czmiscs_win.cpp" />
+    <ClCompile Include="..\..\src\main\utils\win\czthreadutils_win.cpp" />
+    <ClCompile Include="..\..\src\public\resolver\crc.c" />
+    <ClCompile Include="..\..\src\public\resolver\pro_l.c" />
+    <ClCompile Include="..\..\src\public\resolver\pro_payload.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\main\czapplication.h" />
+    <ClInclude Include="..\..\src\main\czconfiguration.h" />
+    <ClInclude Include="..\..\src\main\czsingletonmanager.h" />
+    <ClInclude Include="..\..\src\main\czsuitmanager.h" />
+    <ClInclude Include="..\..\src\main\logic\czapicenter.h" />
+    <ClInclude Include="..\..\src\main\logic\czdatahelper.h" />
+    <ClInclude Include="..\..\src\main\logic\czlogiccenter.h" />
+    <ClInclude Include="..\..\src\main\network\czconnectionsuite.h" />
+    <ClInclude Include="..\..\src\main\network\czdevice.h" />
+    <ClInclude Include="..\..\src\main\network\czmsite.h" />
+    <ClInclude Include="..\..\src\main\network\cznode.h" />
+    <ClInclude Include="..\..\src\main\network\cznodemanager.h" />
+    <ClInclude Include="..\..\src\main\network\czrsite.h" />
+    <ClInclude Include="..\..\src\main\network\czsession.h" />
+    <ClInclude Include="..\..\src\main\network\czsessionmanager.h" />
+    <ClInclude Include="..\..\src\main\network\czsite.h" />
+    <ClInclude Include="..\..\src\main\system\czlog.h" />
+    <ClInclude Include="..\..\src\main\system\czlogger.h" />
+    <ClInclude Include="..\..\src\main\system\czupdatemanager.h" />
+    <ClInclude Include="..\..\src\main\thread\czassemblerthread.h" />
+    <ClInclude Include="..\..\src\main\thread\czcollectorthread.h" />
+    <ClInclude Include="..\..\src\main\thread\czithread.h" />
+    <ClInclude Include="..\..\src\main\thread\czmessagepool.h" />
+    <ClInclude Include="..\..\src\main\thread\czprocessorthread.h" />
+    <ClInclude Include="..\..\src\main\thread\czthreadmanager.h" />
+    <ClInclude Include="..\..\src\main\thread\cztimerthread.h" />
+    <ClInclude Include="..\..\src\main\thrift\czthriftmanager.h" />
+    <ClInclude Include="..\..\src\main\utils\czmiscs.h" />
+    <ClInclude Include="..\..\src\main\utils\czthreadutils.h" />
+    <ClInclude Include="..\..\src\public\defines.h" />
+    <ClInclude Include="..\..\src\public\resolver\crc.h" />
+    <ClInclude Include="..\..\src\public\resolver\pro_config.h" />
+    <ClInclude Include="..\..\src\public\resolver\pro_l.h" />
+    <ClInclude Include="..\..\src\public\resolver\pro_payload.h" />
+    <ClInclude Include="..\..\src\public\types.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

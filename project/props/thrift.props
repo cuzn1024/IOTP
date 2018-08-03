@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <THRIFT_ENABLED />
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(SolutionDir)\deps\thrift\include;$(SolutionDir)\src\main\thrift\impl;$(SolutionDir)\deps\openssl\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\deps\thrift\lib\$(Configuration);$(SolutionDir)\deps\openssl\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>THRIFT_ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libthrift.lib;libthriftnb.lib;libcrypto.lib;libssl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)\deps\openssl\dll\*.dll"  "$(SolutionDir)\gen\bin\$(Configuration)\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\public\protocol\logicfunctionservice.cpp">
+      <Filter>thrift\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\public\protocol\iot_protocol_constants.cpp">
+      <Filter>thrift\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\public\protocol\iot_protocol_types.cpp">
+      <Filter>thrift\protocol</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\src\public\protocol\iot_protocol_constants.h">
+      <Filter>thrift\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\public\protocol\iot_protocol_types.h">
+      <Filter>thrift\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\public\protocol\logicfunctionservice.h">
+      <Filter>thrift\protocol</Filter>
+    </ClInclude>
+    <BuildMacro Include="THRIFT_ENABLED">
+      <Value>$(THRIFT_ENABLED)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

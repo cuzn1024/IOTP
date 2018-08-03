@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="network">
+      <UniqueIdentifier>{c3875e18-027a-41c1-9c1f-2ea41649f661}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system">
+      <UniqueIdentifier>{a25fe77d-a665-49ad-989e-9fcf632218a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thread">
+      <UniqueIdentifier>{f2f7c505-e0bc-4802-9437-6a6807001151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{b9a80d71-1ccc-4435-b4d8-73bbef92fc2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\win">
+      <UniqueIdentifier>{48c6be15-88d2-4147-a465-26687b33597c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thrift">
+      <UniqueIdentifier>{1c75fd06-064c-4c90-ad70-db41c6383e2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="public">
+      <UniqueIdentifier>{c03dd5ad-3c65-4a11-a436-0705b244295e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic">
+      <UniqueIdentifier>{436d1544-4b98-417a-9b6d-d38449e13d17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="public\resolver">
+      <UniqueIdentifier>{55440d4c-6e06-40b9-a298-5fe94182ccfc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\main\network\czconnectionsuite.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\network\czsession.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\utils\win\czmiscs_win.cpp">
+      <Filter>utils\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\utils\win\czthreadutils_win.cpp">
+      <Filter>utils\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\thread\czassemblerthread.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\thread\czcollectorthread.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\thread\czmessagepool.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\thread\czprocessorthread.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\thread\czthreadmanager.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\thread\cztimerthread.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\system\czlog.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\system\czupdatemanager.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\thrift\czthriftmanager.cpp">
+      <Filter>thrift</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\system\czlogger.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\czapplication.cpp" />
+    <ClCompile Include="..\..\src\main\czconfiguration.cpp" />
+    <ClCompile Include="..\..\src\main\czsingletonmanager.cpp" />
+    <ClCompile Include="..\..\src\main\czsuitmanager.cpp" />
+    <ClCompile Include="..\..\src\main\main.cpp" />
+    <ClCompile Include="..\..\src\main\utils\czmiscs.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\network\cznode.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\logic\czlogiccenter.cpp">
+      <Filter>logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\network\cznodemanager.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\network\czsessionmanager.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\logic\czdatahelper.cpp">
+      <Filter>logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\network\czrsite.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\network\czmsite.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\network\czdevice.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\network\czsite.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main\logic\czapicenter.cpp">
+      <Filter>logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\public\resolver\pro_l.c">
+      <Filter>public\resolver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\public\resolver\pro_payload.c">
+      <Filter>public\resolver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\public\resolver\crc.c">
+      <Filter>public\resolver</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\main\network\czconnectionsuite.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\network\czsession.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\utils\czmiscs.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\utils\czthreadutils.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\thread\czassemblerthread.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\thread\czcollectorthread.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\thread\czithread.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\thread\czmessagepool.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\thread\czprocessorthread.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\thread\czthreadmanager.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\thread\cztimerthread.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\system\czlog.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\system\czupdatemanager.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\thrift\czthriftmanager.h">
+      <Filter>thrift</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\system\czlogger.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\czapplication.h" />
+    <ClInclude Include="..\..\src\main\czconfiguration.h" />
+    <ClInclude Include="..\..\src\main\czsingletonmanager.h" />
+    <ClInclude Include="..\..\src\main\czsuitmanager.h" />
+    <ClInclude Include="..\..\src\main\network\cznode.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\public\defines.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\public\types.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\logic\czlogiccenter.h">
+      <Filter>logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\network\cznodemanager.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\network\czsessionmanager.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\logic\czdatahelper.h">
+      <Filter>logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\network\czrsite.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\network\czmsite.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\network\czdevice.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\network\czsite.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main\logic\czapicenter.h">
+      <Filter>logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\public\resolver\pro_config.h">
+      <Filter>public\resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\public\resolver\pro_l.h">
+      <Filter>public\resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\public\resolver\pro_payload.h">
+      <Filter>public\resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\public\resolver\crc.h">
+      <Filter>public\resolver</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
